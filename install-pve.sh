@@ -2,7 +2,7 @@ apt update
 cd
 mkdir /etc/sync-firewall
 cd /sync-firewall
-wget https://raw.githubusercontent.com/niklaswecker/sync-firewall/main/blocklist.txt
+wget https://raw.githubusercontent.com/niklaswecker/sync-firewall/main/blocklist.txt #Link zu D1 Blocklist.txt File 
 sleep 1
 mkdir skripte
 cd skripte
@@ -10,8 +10,8 @@ wget  https://raw.githubusercontent.com/niklaswecker/sync-firewall/main/blocklis
 chmod +x blocklist-update.sh
 sed -i '$ a *  /5 * * * * root /etc/sync-firewall/skripte/blocklist-update.sh >/dev/null 2>&1' /etc/crontab
 sleep 1
-wget  https://raw.githubusercontent.com/niklaswecker/sync-firewall/main/update.sh
-chmod +x update.sh
+wget https://raw.githubusercontent.com/niklaswecker/sync-firewall/main/sync-blocklist-with-pve-firewall.sh
+chmod +x sync-blocklist-with-pve-firewall.sh
 sleep 1
 wget  https://raw.githubusercontent.com/niklaswecker/sync-firewall/main/get-v4.sh
 chmod +x get-v4.sh
